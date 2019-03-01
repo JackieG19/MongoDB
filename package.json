@@ -4,7 +4,7 @@
   "description": "working with mongo database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JackieG19/MongoDB/issues"
   },
-  "homepage": "https://github.com/JackieG19/MongoDB#readme"
+  "homepage": "https://github.com/JackieG19/MongoDB#readme",
+  "dependencies": {
+    "mocha": "^6.0.2"
+  }
 }
