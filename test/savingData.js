@@ -1,7 +1,4 @@
-const mocha = require('mocha');
 const assert = require('assert');
-
-// to be access by the mariochar.js file
 const MarioChar = require('../models/mariochar'); 
  
 
