@@ -16,7 +16,7 @@ mongoose.Promise = global.Promise;
 // run this section of code either before runnong a test of after you run a test.
 
 // Connect to db before tests run
-before(function(done){
+before(function(done){ // this only runs once.
 // tells mocha to wait until the connection has been made before you start running those test.
     
     // Connect to mongodb
@@ -31,3 +31,18 @@ before(function(done){
     
 });
 
+
+// Drop(delete) the characters collection before each test
+
+// beforeEach hook which meand it will tell mocha to run this 
+// code inside here before every single test not just once.
+beforeEach(function(done){ 
+    // Drop the collection
+    mongoose.connection.collections.mariochars.drop(function(){
+    // ^this reference all the collection in the db.the MarioChar collection plural.delete(
+    // callback function(// tell mocha that we've dropped the collection and now we can perform the test))
+    // the callback function when it drops the database then we do something.
+        
+        done(); // now you can run the test
+    });
+});
