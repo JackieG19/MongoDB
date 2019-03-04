@@ -10,7 +10,7 @@ const BookSchema = new Schema({
 
 const AuthorSchema = new Schema({
     name: String,
-    books: [BookSchema]
+    books: [BookSchema] // this is an array of book schema object
 });
 
 const Author = mongoose.model('author', AuthorSchema);
